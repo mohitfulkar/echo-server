@@ -5,10 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 @Module({
-  imports: [
-    AuthModule,
-    ConfigModule.forRoot({ isGlobal: true }), // Loads .env and makes ConfigService available globally
-  ],
+  imports: [AuthModule, ConfigModule.forRoot({ isGlobal: true })],
   controllers: [AppController],
   providers: [AppService],
 })
