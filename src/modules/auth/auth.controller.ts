@@ -8,6 +8,6 @@ export class AuthController {
 
   @Post('/register')
   async register(@Body() payload: User) {
-    return this.authService.create(payload);
+    return this.authService.create(payload)
   }
 }
